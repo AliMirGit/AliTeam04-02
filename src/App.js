@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
   const [data, setData] = useState('');
-
+  const value = 'World 123456';
   useEffect(() => {
     (async function () {
-      const { text } = await( await fetch(`/api/message`)).json();
+      const { text } = await( await fetch('/api/message')).json();
+      //value = text;
       setData(text);
     })();
   });
 
-  return <div>123{data}</div>;
+  return <div>Test Api Data: {value} - {data}</div>;
 }
 
 export default App;
