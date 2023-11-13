@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function App() {
   const [data, setData] = useState('');
   const value = 'World 123456';
-  var text2='test';
+  var text2='test 2';
 
   useEffect(() => {
     (async function () {
