@@ -23,12 +23,13 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      text2  = await( await fetch(`/api/message`)).json();
-      const { text } = await( await fetch(`/api/message`)).json();
-      console.log('text: ' + text);
-      console.log('text2: ' + text2);
-      setData(text);
-      //setData(text2);
+      var apiText = '';
+      apiText  = await( await fetch(`/api/message`)).json();
+      //const { text } = await( await fetch(`/api/message`)).json();
+      //console.log('text: ' + text);
+      console.log('apiText: ' + apiText);
+      //setData(text);
+      setData(apiText);
     })();
   },[
 
