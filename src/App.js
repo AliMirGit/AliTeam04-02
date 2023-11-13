@@ -5,6 +5,7 @@ function App() {
   const value = 'World 123456';
   var text2='test 2';
 
+  /*
   useEffect(() => {
     (async function () {
       //var text3  = await( await fetch(`/api/message`)).json();
@@ -18,6 +19,16 @@ function App() {
       setData(text2);
     })();
   });
+*/
+
+  useEffect(() => {
+    (async function () {
+      text2  = await( await fetch(`/api/message`)).json();
+      setData(text2);
+    })();
+  },[
+    
+  ]);
 
   return <div>{value} - {data} - {text2}</div>;
 }
